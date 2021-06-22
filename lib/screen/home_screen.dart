@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../global.dart';
 import '../widget/icon/gamepad_icon.dart';
+import '../import/utils.dart';
 
 class UISetupHome extends StatelessWidget {
   const UISetupHome();
@@ -28,10 +29,15 @@ class UISetupHome extends StatelessWidget {
                 ),
               ),
               MaterialButton(
-                child: Text('Mode'),
+                child: Text(
+                  'Mode',
+                  style: TextStyle(
+                    color: color.white,
+                  ),
+                ),
                 color: color.style,
                 onPressed: () {
-                  color.themeSwitch(ColorMode.change);
+                  color.themeSwitcher(ThemeSwitchMode.change);
                 },
               )
             ],
