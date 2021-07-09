@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'global.dart';
 import 'screen/home_screen.dart';
 
 void main() {
@@ -11,6 +12,9 @@ class FlutterUISetupApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: color.materialStyle,
+      ),
       home: UISetupHome(),
     );
   }
